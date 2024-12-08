@@ -1,3 +1,5 @@
 [user]
 	name = iodoku
 	email = jdhi0112@naver.com
+[credential]
+	helper = store
