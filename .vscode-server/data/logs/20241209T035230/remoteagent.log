@@ -1,0 +1,47 @@
+2024-12-09 03:52:31.121 [info] 
+
+
+
+
+2024-12-09 03:52:31.152 [info] Extension host agent started.
+2024-12-09 03:52:31.367 [info] [<unknown>][5dcb7f73][ExtensionHostConnection] New connection established.
+2024-12-09 03:52:31.378 [info] Started initializing default profile extensions in extensions installation folder. file:///home/ubuntu/.vscode-server/extensions
+2024-12-09 03:52:31.394 [info] [<unknown>][926798a5][ManagementConnection] New connection established.
+2024-12-09 03:52:31.604 [info] Installing extensions...
+2024-12-09 03:52:31.839 [info] [<unknown>][5dcb7f73][ExtensionHostConnection] <2204965> Launched Extension Host Process.
+2024-12-09 03:52:32.328 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/ubuntu/.vscode-server/extensions
+2024-12-09 03:52:34.052 [info] Installing extension 'ms-ceintl.vscode-language-pack-ko'...
+2024-12-09 03:52:34.331 [info] Getting Manifest... ms-ceintl.vscode-language-pack-ko
+2024-12-09 03:52:34.496 [info] Installing extension: ms-ceintl.vscode-language-pack-ko {"isMachineScoped":true,"isBuiltin":false,"installGivenVersion":false,"isApplicationScoped":true,"installOnlyNewlyAddedFromExtensionPack":true,"profileLocation":{"$mid":1,"fsPath":"/home/ubuntu/.vscode-server/extensions/extensions.json","external":"file:///home/ubuntu/.vscode-server/extensions/extensions.json","path":"/home/ubuntu/.vscode-server/extensions/extensions.json","scheme":"file"},"productVersion":{"version":"1.95.3","date":"2024-11-13T14:50:04.152Z"}}
+2024-12-09 03:52:40.950 [info] Extension signature verification result for ms-ceintl.vscode-language-pack-ko: Success. Executed: true. Duration: 4999ms.
+2024-12-09 03:52:43.785 [info] Extracted extension to file:///home/ubuntu/.vscode-server/extensions/ms-ceintl.vscode-language-pack-ko-1.95.2024103009: ms-ceintl.vscode-language-pack-ko
+2024-12-09 03:52:43.849 [info] Renamed to /home/ubuntu/.vscode-server/extensions/ms-ceintl.vscode-language-pack-ko-1.95.2024103009
+2024-12-09 03:52:43.966 [info] Adding language packs from the extension ms-ceintl.vscode-language-pack-ko
+2024-12-09 03:52:44.151 [info] Extension installed successfully: ms-ceintl.vscode-language-pack-ko file:///home/ubuntu/.vscode-server/extensions/extensions.json
+2024-12-09 03:52:44.154 [info] Extension 'ms-ceintl.vscode-language-pack-ko' v1.95.2024103009 was successfully installed.
+2024-12-09 03:53:08.598 [info] [<unknown>][5dcb7f73][ExtensionHostConnection] <2204965> Extension Host Process exited with code: 0, signal: null.
+2024-12-09 03:53:08.599 [info] Cancelling previous shutdown timeout
+2024-12-09 03:53:08.599 [info] Last EH closed, waiting before shutting down
+2024-12-09 03:53:11.120 [info] [<unknown>][ead6b795][ManagementConnection] New connection established.
+2024-12-09 03:53:11.122 [info] [<unknown>][9860efe3][ExtensionHostConnection] New connection established.
+2024-12-09 03:53:11.129 [info] [<unknown>][9860efe3][ExtensionHostConnection] <2232270> Launched Extension Host Process.
+2024-12-09 03:53:13.772 [error] CodeExpectedError: Could not find pty 2 on pty host
+    at I.W (file:///home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/vs/platform/terminal/node/ptyHostMain.js:48:12233)
+    at I.updateTitle (file:///home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/vs/platform/terminal/node/ptyHostMain.js:48:7722)
+    at N.s.<computed> (file:///home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/vs/platform/terminal/node/ptyHostMain.js:48:2962)
+    at Object.call (file:///home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/vs/platform/terminal/node/ptyHostMain.js:31:4203)
+    at Jc.s (file:///home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/vs/platform/terminal/node/ptyHostMain.js:29:78968)
+    at Jc.q (file:///home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/vs/platform/terminal/node/ptyHostMain.js:29:78491)
+    at hs.value (file:///home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/vs/platform/terminal/node/ptyHostMain.js:29:77893)
+    at C.B (file:///home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/vs/platform/terminal/node/ptyHostMain.js:29:746)
+    at C.fire (file:///home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/vs/platform/terminal/node/ptyHostMain.js:29:964)
+    at process.w (file:///home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/vs/platform/terminal/node/ptyHostMain.js:24:29137)
+    at process.emit (node:events:519:28)
+    at emit (node:internal/child_process:951:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+2024-12-09 03:53:38.464 [info] [<unknown>][926798a5][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-12-09 03:58:08.605 [info] New EH opened, aborting shutdown
+2024-12-09 03:58:08.606 [error] Error: Unexpected SIGPIPE
+    at process.<anonymous> (file:///home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/server-main.js:183:1060)
+    at process.emit (node:events:531:35)
+2024-12-09 04:06:12.475 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
