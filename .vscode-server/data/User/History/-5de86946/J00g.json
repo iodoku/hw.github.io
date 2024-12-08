@@ -1,0 +1,564 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Saramin Jobs API",
+      "description": "API documentation for Saramin Jobs"
+    },
+    "host": "113.198.66.75:10228",
+    "basePath": "/",
+    "schemes": ["http"],
+    "securityDefinitions": {
+      "BearerAuth": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header",
+        "description": "Enter your JWT token in the format: Bearer {token}"
+      }
+    },
+    "security": [
+      {
+        "BearerAuth": []
+      }
+    ],
+    "paths": {
+  
+  
+      "/auth/register": {
+        "post": {
+          "summary": "회원가입",
+          "description": "회원 정보를 저장합니다.",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": { "type": "string" },
+                  "email": { "type": "string" },
+                  "password": { "type": "string" }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "201": { "description": "User registered successfully" },
+            "400": { "description": "Invalid email format or email already exists" }
+          }
+        }
+      },
+  
+  
+      "/auth/login": {
+        "post": {
+          "summary": "로그인",
+          "description": "사용자 인증 및 JWT 토큰 발급",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": { "type": "string", "example": "string" },
+                  "password": { "type": "string", "example": "string" }
+                },
+                "required": ["email", "password"]
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "로그인 성공 및 JWT 토큰 발급",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "access_token": { "type": "string" },
+                  "refresh_token": { "type": "string" }
+                }
+              }
+            },
+            "400": {
+              "description": "이메일 또는 비밀번호가 올바르지 않음"
+            }
+          }
+        }
+      },
+  
+      
+      "/auth/refresh": {
+        "post": {
+          "summary": "토큰 갱신",
+          "description": "Refresh 토큰을 사용하여 Access 토큰 갱신",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "Access 토큰 갱신 성공",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "access_token": { "type": "string" }
+                }
+              }
+            },
+            "401": {
+              "description": "Refresh 토큰이 유효하지 않음"
+            }
+          }
+        }
+      },
+  
+  
+      "/auth/profile": {
+        "put": {
+          "summary": "회원 정보 수정",
+          "description": "사용자 프로필 및 비밀번호 수정",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": { "type": "string", "example": "new_username" },
+                  "password": { "type": "string", "example": "new_password" }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "회원 정보 수정 성공",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": { "type": "string", "example": "Profile updated successfully" }
+                }
+              }
+            },
+            "404": {
+              "description": "사용자를 찾을 수 없음"
+            },
+            "401": {
+              "description": "Access 토큰이 유효하지 않음"
+            }
+          }
+        }
+      },
+  
+  
+      "/jobs": {
+        "get": {
+          "summary": "공고 목록 조회",
+          "description": "페이지네이션, 필터링, 정렬, 검색을 지원하는 공고 목록 조회 API",
+          "parameters": [
+            {
+              "name": "page",
+              "in": "query",
+              "description": "페이지 번호",
+              "required": false,
+              "type": "integer",
+              "default": 1
+            },
+            {
+              "name": "page_size",
+              "in": "query",
+              "description": "페이지당 항목 수",
+              "required": false,
+              "type": "integer",
+              "default": 20
+            },
+            {
+              "name": "정렬",
+              "in": "query",
+              "description": "정렬 기준 필터(예: 마감순, 수정순)",
+              "required": false,
+              "type": "string",
+              "enum": ["마감순", "수정순"]
+            },
+            {
+              "name": "지역",
+              "in": "query",
+              "description": "지역 필터",
+              "required": false,
+              "type": "string",
+              "enum": ["서울", "경기", "인천","부산","대구","광주","대전","울산","세종","강원","경남","경북","전남","전북","충남","충북","제주"]
+            },
+            {
+              "name": "경력",
+              "in": "query",
+              "description": "경력 필터",
+              "required": false,
+              "type": "string",
+              "enum": ["경력X", "1년이상","2년이상","3년이상","4년이상","5년이상"]
+            },
+            {
+              "name": "급여",
+              "in": "query",
+              "description": "급여 필터",
+              "required": false,
+              "type": "string",
+              "enum": ["3천만원이하", "4천만원이하","5천만원이하","6천만원이상"]
+            },
+            {
+              "name": "기술스택",
+              "in": "query",
+              "description": "기술 스택 필터",
+              "required": false,
+              "type": "string",
+              "enum": ["Python", "C++","Java","웹개발","게임개발","딥러닝","머신러닝","빅데이터","데이터분석가","Linux","솔루션","앱개발 ","데이터시각화",
+                        "AWS","DBA","SI개발","백엔드/서버개발","RDBMS","알고리즘","QA/테스터","S/W","클라우드","Django","SDK","소프트웨어개발","프론트엔드",
+                        "유지보수","iOS","ASP","ASP.NET","Azure","SE(시스템엔지니어)","DevOps","데이터라벨링","AI(인공지능)","Pandas","인프라","하드웨어","개발PM","임베디드"]
+            },
+            {
+              "name": "검색",
+              "in": "query",
+              "description": "검색 키워드 ex)키워드(python, C++) 회사명, 지역(서울, 인천)",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "공고 목록 조회 성공",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "integer" },
+                    "title": { "type": "string" },
+                    "region": { "type": "string" },
+                    "experience": { "type": "string" },
+                    "salary": { "type": "string" },
+                    "tech_stack": { "type": "string" },
+                    "created_at": { "type": "string", "format": "date-time" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+  
+  
+      "/jobs/{id}": {
+        "get": {
+          "summary": "공고 상세 조회",
+          "description": "특정 공고의 상세 정보 및 관련 공고 추천",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "공고 ID",
+              "required": true,
+              "type": "integer"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "공고 상세 조회 성공",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": { "type": "integer" },
+                  "title": { "type": "string" },
+                  "description": { "type": "string" },
+                  "region": { "type": "string" },
+                  "experience": { "type": "string" },
+                  "salary": { "type": "string" },
+                  "tech_stack": { "type": "string" },
+                  "views": { "type": "integer" },
+                  "related_jobs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": { "type": "integer" },
+                        "title": { "type": "string" },
+                        "region": { "type": "string" }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "공고를 찾을 수 없음"
+            }
+          }
+        }
+      },
+  
+  
+      "/applications": {
+        "post": {
+          "summary": "지원하기",
+          "description": "공고에 지원합니다.",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "job_id": {
+                    "type": "integer",
+                    "description": "지원할 공고 ID"
+                  }
+                },
+                "required": ["job_id"]
+              }
+            },
+            {
+              "name": "resume",
+              "in": "formData",
+              "type": "file",
+              "description": "이력서 파일 (선택)"
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "지원 성공"
+            },
+            "400": {
+              "description": "중복 지원 또는 다른 오류"
+            }
+          }
+        },
+        "get": {
+          "summary": "지원 내역 조회",
+          "description": "사용자의 지원 내역을 조회합니다.",
+          "parameters": [
+            {
+              "name": "지원내역",
+              "in": "query",
+              "type": "string",
+              "description": "지원 상태 필터",
+              "enum": ["지원 완료", "심사중","합격"]
+            },
+            {
+              "name": "보는순",
+              "in": "query",
+              "type": "string",
+              "description": "정렬 기준",
+              "enum": ["날짜빠른순", "날짜느린순"]
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "지원 내역 조회 성공",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "integer" },
+                    "job_id": { "type": "integer" },
+                    "status": { "type": "string" },
+                    "created_at": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+  
+  
+      "/applications/{id}": {
+        "delete": {
+          "summary": "지원 취소",
+          "description": "특정 지원 내역을 취소합니다.",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "type": "integer",
+              "required": true,
+              "description": "취소할 지원 ID"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "취소 성공"
+            },
+            "404": {
+              "description": "지원 내역을 찾을 수 없음"
+            },
+            "400": {
+              "description": "현재 상태에서 취소 불가"
+            }
+          }
+        }
+      },
+      
+      "/bookmarks": {
+        "post": {
+          "summary": "북마크 토글 처리",
+          "description": "사용자가 공고를 북마크 추가 또는 삭제합니다. 해당 공고가 이미 북마크 되어 있으면 삭제되고, 없으면 추가됩니다.",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "job_id": { "type": "integer", "example": 123 }
+                },
+                "required": ["job_id"]
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "북마크가 추가되었습니다."
+            },
+            "200": {
+              "description": "북마크가 삭제되었습니다."
+            },
+            "400": {
+              "description": "잘못된 요청: `job_id`가 누락되었습니다."
+            }
+          }
+        },
+        "get": {
+          "summary": "북마크 목록 조회",
+          "description": "사용자가 북마크한 공고 목록을 조회합니다.",
+          "parameters": [
+            {
+              "name": "user_id",
+              "in": "query",
+              "required": true,
+              "type": "string",
+              "description": "사용자 ID"
+            },
+            {
+              "name": "page",
+              "in": "query",
+              "description": "페이지 번호",
+              "type": "integer",
+              "default": 1
+            },
+            {
+              "name": "page_size",
+              "in": "query",
+              "description": "페이지당 항목 수",
+              "type": "integer",
+              "default": 20
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "북마크 목록 조회 성공",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "job_id": { "type": "integer" },
+                    "created_at": { "type": "string", "format": "date-time" }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "잘못된 요청"
+            }
+          }
+        }      
+      },
+
+
+      "/ratings": {
+        "post": {
+            "summary": "회사에 대한 평점 생성 1~5점",
+            "description": "평점을 생성하거나 수정하세요",
+            "parameters": [
+            {
+                "in": "body",
+                "name": "body",
+                "required": true,
+                "schema": {
+                "type": "object",
+                "properties": {
+                    "company_id": {
+                    "type": "integer",
+                    "example": 1
+                    },
+                    "rating": {
+                    "type": "integer",
+                    "example": 4,
+                    "minimum": 1,
+                    "maximum": 5
+                    }
+                },
+                "required": ["company_id", "rating"]
+                }
+            }
+            ],
+            "responses": {
+            "201": {
+                "description": "성공적으로 평점이 생성 되었습니다."
+            },
+            "400": {
+                "description": "범위를 넘어간 평점"
+            }
+            }
+        },
+        "get": {
+            "summary": "회사 평점 조회",
+            "description": "기준 평점에서 낮은순으로 회사들이 나타납니다",
+            "parameters": [
+            {
+                "name": "min_rating",
+                "in": "query",
+                "type": "number",
+                "description": "평점 제한 값",
+                "default": 1
+            },
+            {
+                "name": "page",
+                "in": "query",
+                "type": "integer",
+                "description": "페이지",
+                "default": 1
+            }
+            ],
+            "responses": {
+            "200": {
+                "description": "회사 리스트",
+                "schema": {
+                "type": "object",
+                "properties": {
+                    "page": { "type": "integer" },
+                    "per_page": { "type": "integer" },
+                    "total_pages": { "type": "integer" },
+                    "total_companies": { "type": "integer" },
+                    "companies": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                        "company_id": { "type": "integer" },
+                        "company": { "type": "string" },
+                        "average_rating": { "type": "number" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }      
+    }
+
+
+  }
+}
