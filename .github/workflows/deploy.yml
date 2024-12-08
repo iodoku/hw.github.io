@@ -1,0 +1,40 @@
+name: Flask CI/CD
+
+on:
+  push:
+    branches:
+      - main  # main 브랜치에 푸시될 때 실행
+  pull_request:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 저장소 체크아웃
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Python 환경 설정
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      # 3. 의존성 설치
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # 4. 애플리케이션 테스트
+      - name: Run tests
+        run: |
+          pytest  # pytest로 테스트 실행
+
+      # 5. Flask 애플리케이션 실행 (배포용 서버 설정 예시)
+      - name: Deploy to Production
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "Deploying Flask app..."
+          # 여기에 배포 명령어 추가 (예: SSH, AWS, Docker 사용)
