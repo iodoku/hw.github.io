@@ -203,3 +203,46 @@ python app.py
 git add .
 git commit -m "update"
 git push origin main
+git add .
+git commit -m "update"
+git push origin main
+git pull origin main
+git add .
+git commit -m "Resolve merge conflict"
+git push origin main
+git push origin main --force
+pip install numpy --upgrade
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install numpy
+python3 -m venv --clear venv
+rm -rf venv
+python3 -m venv venv
+source venv/bin/activate
+python -m pip install --upgrade pip
+pip install numpy
+git add .
+git commit -m "Resolve merge conflict"
+git push origin main
+pip install -r requirements.txt
+git add .
+git commit -m "Resolve merge conflict"
+git push origin main
+pip install pytest
+echo "pytest" >> requirements.txt
+pip install -r requirements.txt
+pytest --version
+git add .
+git commit -m "Resolve merge conflict"
+git push origin main
+pytest
+pytest tests/
+rm -rf .pytest_cache/
+pytest tests/
+ls tests/test_sample.py
+ls
+pytest tests/
+git add .
+git commit -m "Resolve merge conflict"
+git push origin main
