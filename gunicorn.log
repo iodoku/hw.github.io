@@ -1,0 +1,7 @@
+[2024-12-10 21:50:22 +0900] [651782] [INFO] Starting gunicorn 23.0.0
+[2024-12-10 21:50:22 +0900] [651782] [INFO] Listening at: http://0.0.0.0:10228 (651782)
+[2024-12-10 21:50:22 +0900] [651782] [INFO] Using worker: sync
+[2024-12-10 21:50:22 +0900] [651783] [INFO] Booting worker with pid: 651783
+[2024-12-10 21:50:49 +0900] [651782] [INFO] Handling signal: int
+[2024-12-10 21:50:49 +0900] [651783] [INFO] Worker exiting (pid: 651783)
+[2024-12-10 21:50:49 +0900] [651782] [INFO] Shutting down: Master

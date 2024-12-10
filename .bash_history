@@ -246,3 +246,11 @@ pytest tests/
 git add .
 git commit -m "Resolve merge conflict"
 git push origin main
+source myenv/bin/activate
+python app.py
+git add .
+git commit -m "readme"
+git push origin main
+git add .
+git commit -m "update"
+git push origin main
