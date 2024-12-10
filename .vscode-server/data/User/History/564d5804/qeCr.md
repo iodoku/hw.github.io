@@ -13,7 +13,6 @@
 - Ratings.py (평점 관리 구현 파일)
 - Recommands.py (조회수 조회 구현 파일)
 - Community.py (커뮤니티 관리 구현 파일)
-- jobcrawl.py (crawled-data.sql을 db에 저장하는 파일)
 
 ## 구현 API
 
