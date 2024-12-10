@@ -11,3 +11,7 @@
 
 2024-12-10 20:53:31.799 [info] New EH opened, aborting shutdown
 2024-12-10 23:45:53.558 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+2024-12-11 00:10:54.393 [info] [<unknown>][5cd297b6][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2024-12-11 00:10:54.501 [info] [<unknown>][1a7d04b4][ExtensionHostConnection] <647372> Extension Host Process exited with code: 0, signal: null.
+2024-12-11 00:10:54.502 [info] Last EH closed, waiting before shutting down
+2024-12-11 00:15:54.505 [info] Last EH closed, shutting down

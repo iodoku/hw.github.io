@@ -254,3 +254,92 @@ git push origin main
 git add .
 git commit -m "update"
 git push origin main
+source myenv/bin/activate
+python app.py
+gunicorn app:app --bind 0.0.0.0:8000
+pip install gunicorn
+gunicorn app:app --bind 0.0.0.0:8000
+gunicorn app:app --bind 0.0.0.0:10228
+ps aux | grep gunicorn
+gunicorn app:app --bind 0.0.0.0:10228 --daemon
+ps aux | grep gunicorn
+sudo ufw allow 10228
+sudo ufw reload
+gunicorn app:app --bind 0.0.0.0:10228
+ps aux | grep gunicorn
+kill -9 650665
+kill -9 650666
+gunicorn app:app --bind 0.0.0.0:10228 --daemon
+kill -9 650665
+kill -9 650666
+gunicorn app:app --bind 0.0.0.0:10228
+kill -9 651148 
+kill -9 651149
+gunicorn app:app --bind 0.0.0.0:10228
+sudo netstat -tuln | grep 10228
+sudo lsof -i :10228
+gunicorn app:app --bind 0.0.0.0:10228 --log-file gunicorn.log
+sudo netstat -tuln | grep 10228
+ps aux | grep gunicorn
+gunicorn app:app --bind 0.0.0.0:10228 --daemon
+sudo netstat -tuln | grep 10228
+sudo ufw allow 10228
+sudo ufw reload
+curl ifconfig.me
+gunicorn app:app --bind 0.0.0.0:8080 --daemon
+ps aux | grep gunicorn
+kill -9 652023
+kill -9 652024
+kill -9 652743
+kill -9 653144
+kill -9 652743
+kill -9 653144
+ps aux | grep gunicorn
+gunicorn app:app --bind 0.0.0.0:8080 --daemon
+git add .
+git commit -m "update"
+git push origin main
+pip freeze > requirements.txt
+git add .
+git commit -m "update"
+git push origin main
+pip install numpy --upgrade
+python --version
+pip freeze > requirements.txt
+git add .
+git commit -m "update"
+git push origin main
+git add .
+git commit -m "update"
+git push origin main
+python app.py
+ps aux | grep gunicorn
+kill -9 653634
+kill -9 653636
+python app.py
+git add .
+git commit -m "update"
+git push origin main
+ps aux | grep gunicorn
+gunicorn app:app --bind 0.0.0.0:8080 --daemon
+git add .
+git commit -m "update"
+git push origin main
+ps aux | grep gunicorn
+
+kill -9 658113
+git add .
+git commit -m "update"
+git push origin main
+git add .
+git commit -m "update"
+git push origin main
+git add .
+git commit -m "update"
+git push origin main
+git add .
+git commit -m "update"
+git push origin main
+git add .
+git commit -m "update"
+git push origin main

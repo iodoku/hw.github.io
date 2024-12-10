@@ -5,20 +5,28 @@
 * the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
 * the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
 *
-Server bound to /tmp/code-688580b2-53ae-4b0f-8fa1-068e326f8db7
-Extension host agent listening on /tmp/code-688580b2-53ae-4b0f-8fa1-068e326f8db7
+Server bound to /tmp/code-714100e0-a2b6-4139-a9f7-7088b5c5c067
+Extension host agent listening on /tmp/code-714100e0-a2b6-4139-a9f7-7088b5c5c067
 
-[20:48:31] 
-
-
+[00:26:53] 
 
 
-[20:48:31] Extension host agent started.
-[20:48:31] [<unknown>][1a7d04b4][ExtensionHostConnection] New connection established.
-[20:48:31] [<unknown>][5cd297b6][ManagementConnection] New connection established.
-[20:48:32] [<unknown>][1a7d04b4][ExtensionHostConnection] <647372> Launched Extension Host Process.
-[20:48:32] [<unknown>][1a7d04b4][ExtensionHostConnection] <647372><stderr> Error reading NLS messages file /home/ubuntu/.vscode-server/data/clp/3e5f309cded99583ab37e0d647ed0d1b.ko/f1a4fb101478ce6ec82fe9627c43efbf9e98c813/nls.messages.json: Error: ENOENT: no such file or directory, open '/home/ubuntu/.vscode-server/data/clp/3e5f309cded99583ab37e0d647ed0d1b.ko/f1a4fb101478ce6ec82fe9627c43efbf9e98c813/nls.messages.json'
 
+
+[00:26:53] Extension host agent started.
+[00:26:53] [<unknown>][907d5311][ManagementConnection] New connection established.
+[00:26:53] [<unknown>][a4f1e8ec][ExtensionHostConnection] New connection established.
+Generating translation files failed. Error: ENOENT: no such file or directory, open '/home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/nls.keys.json'
+    at async open (node:internal/fs/promises:639:25)
+    at async Object.readFile (node:internal/fs/promises:1242:14)
+    at async Nv (file:///home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/server-main.js:3:16834)
+    at async o8 (file:///home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/server-main.js:67:36551)
+    at async jh.start (file:///home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/server-main.js:67:39717) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/nls.keys.json'
+}
+[00:26:54] [<unknown>][a4f1e8ec][ExtensionHostConnection] <705875> Launched Extension Host Process.
 New EH opened, aborting shutdown
-[20:53:31] New EH opened, aborting shutdown
-[23:45:53] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+[00:31:53] New EH opened, aborting shutdown
