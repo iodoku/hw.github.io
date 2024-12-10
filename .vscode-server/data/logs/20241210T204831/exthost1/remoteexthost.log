@@ -460,3 +460,5 @@
 	at ChildProcess.<anonymous> (/home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/extensions/git/dist/main.js:2:1044348)
 	at ChildProcess.emit (node:events:531:35)
 	at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+2024-12-10 23:38:33.928 [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onLanguage:markdown'
+2024-12-10 23:38:34.566 [info] ExtensionService#_doActivateExtension vscode.markdown-math, startup: false, activationEvent: 'api', root cause: vscode.markdown-language-features
