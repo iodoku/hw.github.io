@@ -1,0 +1,10 @@
+2024-12-14 18:29:10.051 [info] 
+
+
+
+
+2024-12-14 18:29:10.062 [info] Extension host agent started.
+2024-12-14 18:29:10.117 [error] [<unknown>][e4ca1a9b][ManagementConnection] Unknown reconnection token (never seen).
+2024-12-14 18:29:46.587 [info] [<unknown>][850d48df][ManagementConnection] New connection established.
+2024-12-14 18:29:46.591 [info] [<unknown>][98565d89][ExtensionHostConnection] New connection established.
+2024-12-14 18:29:46.630 [info] [<unknown>][98565d89][ExtensionHostConnection] <1488> Launched Extension Host Process.

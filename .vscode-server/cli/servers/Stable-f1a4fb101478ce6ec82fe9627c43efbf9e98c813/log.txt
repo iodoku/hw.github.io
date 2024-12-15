@@ -5,17 +5,19 @@
 * the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
 * the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
 *
-Server bound to /tmp/code-714100e0-a2b6-4139-a9f7-7088b5c5c067
-Extension host agent listening on /tmp/code-714100e0-a2b6-4139-a9f7-7088b5c5c067
+Server bound to /tmp/code-fbb59e55-ec22-4e51-be9d-3a505212cde8
+Extension host agent listening on /tmp/code-fbb59e55-ec22-4e51-be9d-3a505212cde8
 
-[00:26:53] 
-
-
+[16:04:57] 
 
 
-[00:26:53] Extension host agent started.
-[00:26:53] [<unknown>][907d5311][ManagementConnection] New connection established.
-[00:26:53] [<unknown>][a4f1e8ec][ExtensionHostConnection] New connection established.
+
+
+[16:04:57] Extension host agent started.
+[16:04:57] [<unknown>][0cfaab72][ManagementConnection] Unknown reconnection token (never seen).
+[16:04:57] Deleted uninstalled extension from disk ms-ceintl.vscode-language-pack-ko /home/ubuntu/.vscode-server/extensions/ms-ceintl.vscode-language-pack-ko-1.95.2024103009
+[16:05:04] [<unknown>][87fb68f2][ManagementConnection] New connection established.
+[16:05:04] [<unknown>][84e848fe][ExtensionHostConnection] New connection established.
 Generating translation files failed. Error: ENOENT: no such file or directory, open '/home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/nls.keys.json'
     at async open (node:internal/fs/promises:639:25)
     at async Object.readFile (node:internal/fs/promises:1242:14)
@@ -27,6 +29,4 @@ Generating translation files failed. Error: ENOENT: no such file or directory, o
   syscall: 'open',
   path: '/home/ubuntu/.vscode-server/cli/servers/Stable-f1a4fb101478ce6ec82fe9627c43efbf9e98c813/server/out/nls.keys.json'
 }
-[00:26:54] [<unknown>][a4f1e8ec][ExtensionHostConnection] <705875> Launched Extension Host Process.
-New EH opened, aborting shutdown
-[00:31:53] New EH opened, aborting shutdown
+[16:05:04] [<unknown>][84e848fe][ExtensionHostConnection] <1480> Launched Extension Host Process.

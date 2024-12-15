@@ -1,0 +1,16 @@
+2024-12-14 21:16:10.651 [info] 
+
+
+
+
+2024-12-14 21:16:10.663 [info] Extension host agent started.
+2024-12-14 21:16:10.718 [error] [<unknown>][2ffb3b7c][ManagementConnection] Unknown reconnection token (never seen).
+2024-12-14 21:16:18.014 [info] [<unknown>][e2600c97][ManagementConnection] New connection established.
+2024-12-14 21:16:18.018 [info] [<unknown>][01f28588][ExtensionHostConnection] New connection established.
+2024-12-14 21:16:18.035 [info] [<unknown>][01f28588][ExtensionHostConnection] <1477> Launched Extension Host Process.
+2024-12-14 21:16:18.139 [info] [<unknown>][01f28588][ExtensionHostConnection] <1477><stderr> Error reading NLS messages file /home/ubuntu/.vscode-server/data/clp/0d8c6eb27ebf0819b0f03bef87650722.ko/138f619c86f1199955d53b4166bef66ef252935c/nls.messages.json: Error: ENOENT: no such file or directory, open '/home/ubuntu/.vscode-server/data/clp/0d8c6eb27ebf0819b0f03bef87650722.ko/138f619c86f1199955d53b4166bef66ef252935c/nls.messages.json'
+
+2024-12-14 21:21:11.095 [info] New EH opened, aborting shutdown
+2024-12-14 21:21:11.100 [error] Error: Unexpected SIGPIPE
+    at process.<anonymous> (file:///home/ubuntu/.vscode-server/cli/servers/Stable-138f619c86f1199955d53b4166bef66ef252935c/server/out/server-main.js:184:1060)
+    at process.emit (node:events:530:35)

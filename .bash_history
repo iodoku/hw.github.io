@@ -343,3 +343,251 @@ git push origin main
 git add .
 git commit -m "update"
 git push origin main
+source myenv/bin/activate
+gunicorn app:app --bind 0.0.0.0:8080 --daemon
+ps aux | grep gunicorn
+git add .
+git commit -m "update"
+git push origin main
+sudo passwd ubuntu
+202011720@jbnu.ac.kr
+sudo reboot
+sudo passwd ubuntu
+sudo reboot
+sudo apt update
+sudo apt upgrade -y
+sudo nano /etc/ssh/sshd_config
+exit
+sudo passwd ubuntu
+sudo nano /etc/pam.d/common-auth
+sudo systemctl restart ssh
+sudo nano /etc/ssh/sshd_config
+sudo systemctl restart ssh
+sudo passwd ubuntu
+ssh ubuntu@113.198.66.75
+sudo nano /etc/ssh/sshd_config
+sudo systemctl restart ssh
+sudo faillog -u ubuntu
+sudo touch /var/log/faillog
+sudo chmod 600 /var/log/faillog
+sudo faillog -u ubuntu
+sudo passwd ubuntu
+su - ubuntu
+sudo nano /etc/pam.d/common-auth
+sudo systemctl restart ssh
+sudo tail -f /var/log/auth.log
+sudo nano /etc/securetty
+sudo nano /etc/pam.d/common-auth
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+nano ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+sudo nano /etc/ssh/sshd_config
+sudo systemctl restart ssh
+sudo passwd ubuntu
+sudo systemctl restart ssh
+sudo nano /etc/ssh/sshd_config
+sudo nano /etc/pam.d/common-auth
+sudo pam-auth-update --force
+sudo faillog -u ubuntu
+sudo nano /etc/ssh/sshd_config
+sudo systemctl restart ssh
+sudo passwd ubuntu
+localectl status
+sudo systemctl status ssh
+sudo passwd ubuntu
+sudo nano /etc/pam.d/common-auth
+localectl status
+sudo localectl set-keymap us
+sudo passwd ubuntu
+sudo reboot
+echo 'ubuntu:Jdhi@4862130' | sudo chpasswd
+su - ubuntu
+sudo nano /etc/ssh/sshd_config
+sudo systemctl restart sshd
+sudo reboot
+cat /etc/passwd
+sudo tail -n 50 /var/log/auth.log
+sudo nano /etc/ssh/sshd_config
+sudo nano /etc/pam.d/login
+sudo nano /etc/pam.d/common-auth
+sudo tail -f /var/log/auth.log
+sudo pam_tally2 --user=ubuntu
+sudo tail -f /var/log/auth.log
+sudo pam_tally2 --user=ubuntu
+sudo tail -f /var/log/auth.log
+sudo systemctl restart sshd
+sudo pam_tally2 --user=ubuntu
+sudo apt list --installed | grep libpam-modules
+sudo apt update
+sudo apt install libpam-modules
+sudo faillock --user ubuntu
+sudo tail -n 50 /var/log/auth.log
+sudo nano /etc/pam.d/login
+echo 'ubuntu:Jdhi@4862130' | sudo chpasswd
+su - ubuntu
+sudo tail -f /var/log/auth.log
+echo "ubuntu:simplepassword" | sudo chpasswd
+echo "ubuntu:Simple123!" | sudo chpasswd
+echo "ubuntu:ComplexPass123!" | sudo chpasswd
+sudo tail -f /var/log/auth.log
+sudo nano /etc/pam.d/common-auth
+sudo pam-auth-update
+sudo nano /etc/pam.d/common-auth
+sudo tail -f /var/log/auth.log
+sudo nano /etc/pam.d/common-auth
+sudo pam-auth-update
+sudo tail -f /var/log/auth.log
+sudo faillock --user ubuntu
+sudo nano /etc/pam.d/common-auth
+sudo tail -f /var/log/auth.log
+sudo nano /etc/security/pwquality.conf
+echo "ubuntu:test123" | sudo chpasswd
+echo "ubuntu:jdhi0112" | sudo chpasswd
+echo "ubuntu:12345678" | sudo chpasswd
+sudo tail -f /var/log/auth.log
+sudo nano /etc/pam.d/common-auth
+sudo pam-auth-update
+sudo tail -f /var/log/auth.log
+sudo nano /etc/pam.d/common-auth
+sudo pam-auth-update
+sudo faillock --user ubuntu
+sudo faillock --user ubuntu --reset
+sudo nano /etc/ssh/sshd_config
+sudo systemctl restart sshd
+sudo passwd root
+sudo tail -f /var/log/auth.log
+sudo nano /etc/pam.d/common-auth
+sudo pam-auth-update
+sudo tail -f /var/log/auth.log
+sudo usermod -U ubuntu
+ls -ld /home/ubuntu
+sudo pam-auth-update
+sudo nano /etc/pam.d/common-auth
+sudo tail -f /var/log/auth.log
+sudo nano /etc/pam.d/common-auth
+sudo passwd --status ubuntu
+sudo nano /etc/ssh/sshd_config
+sudo systemctl restart sshd
+sudo tail -f /var/log/auth.log
+cat /etc/passwd | grep ubuntu
+ls -ld /home/ubuntu
+grep ubuntu /etc/passwd
+sudo nano /etc/pam.d/common-auth
+echo "ubuntu:jdhi0112" | sudo chpasswd
+sudo tail -f /var/log/auth.log
+sudo cat /etc/shadow | grep -E "ubuntu|root"
+sudo ufw status
+sudo nano /etc/ssh/sshd_config
+eixt
+exit
+sudo nano /etc/pam.d/login
+sudo nano /etc/securetty
+sudo systemctl status getty@tty1.service
+sudo tail -f /var/log/auth.log
+sudo faillock --user ubuntu
+sudo cat /etc/shadow | grep ubuntu
+sudo nano /etc/security/pwquality.conf
+sudo nano /etc/securetty
+sudo nano /etc/pam.d/common-auth
+ssh -p 7777 ubuntu@113.198.66.75
+ubuntu@202011720-jd:~$ ssh -p 10228 ubuntu@113.198.66.75
+ssh -p 10228 ubuntu@113.198.66.75
+ssh -p 7777 ubuntu@113.198.66.75
+sudo nano /etc/pam.d/common-auth
+sudo nano /etc/securetty
+sudo nano /etc/pam.d/common-auth
+echo "ubuntu:Test1234" | sudo chpasswd
+echo "ubuntu:Test1357" | sudo chpasswd
+/etc/pam.d/login
+sudo nano /etc/pam.d/login
+sudo nano /etc/pam.d/common-auth
+sudo tail -f /var/log/auth.log
+sudo nano /etc/pam.d/common-auth
+sudo passwd --status ubuntu'
+sudo passwd --status ubuntu
+sudo tail -f /var/log/auth.log
+sudo userdel -r ubuntu
+echo "ubuntu:jdhi0112" | sudo chpasswd
+sudo tail -f /var/log/auth.log
+sudo cat /etc/passwd | grep ubuntu
+sudo nano /etc/pam.d/common-auth
+sudo nano /etc/pam.d/login
+sudo pam-auth-update
+sudo passwd --status ubuntu
+sudo systemctl status getty@tty1.service
+sudo passwd root
+sudo cat /etc/passwd | grep -E "ubuntu|root"
+sudo cat /etc/shadow | grep -E "ubuntu|root"
+sudo nano /etc/pam.d/common-auth
+sudo nano /etc/pam.d/login
+sudo systemctl status getty@tty1.service
+sudo systemctl restart getty@tty1.service
+sudo systemctl restart getty.target
+sudo faillock --user ubuntu --reset
+sudo faillock --user root --reset
+sudo reboot
+sudo tail -f /var/log/auth.log
+sudo nano /etc/pam.d/login
+sudo cat /etc/securetty
+sudo cat /etc/passwd | grep "ubuntu\|root"
+sudo cat /etc/shadow | grep "ubuntu\|root"
+sudo nano /etc/pam.d/common-auth
+sudo systemctl status getty@tty1.service
+sudo cat /etc/passwd | grep "ubuntu"
+sudo cat /etc/shadow | grep "ubuntu"
+sestatus
+passwd ubuntu
+reboot
+sudo reboot
+sudo tail -f /var/log/auth.log
+sudo nano /etc/pam.d/login
+sudo nano /etc/pam.d/common-auth
+sudo nano /etc/ssh/sshd_config
+sudo systemctl restart sshd
+sudo tail -f /var/log/auth.log
+echo "ubuntu:jdhi0112" | sudo chpasswd
+sudo nano /etc/pam.d/login
+sudo tail -f /var/log/auth.log
+chmod u+s /usr/bin/su
+chmod 4755 /bin/su
+sudo nano /etc/ssh/sshd_config
+sudo systemctl restart sshd
+sudo tail -f /var/log/auth.log
+sudo nano /etc/ssh/sshd_config
+sudo systemctl restart sshd
+sudo ufw allow 19228
+sudo systemctl status sshd
+sudo tail -f /var/log/auth.log
+sudo nano /etc/ssh/sshd_config
+sudo systemctl restart sshd
+sudo chmod 700 /home/ubuntu
+sudo chmod 700 /home/ubuntu/.ssh
+sudo chmod 600 /home/ubuntu/.ssh/authorized_keys
+sudo chown -R ubuntu:ubuntu /home/ubuntu/.ssh
+sudo reboot
+cat /etc/shadow | grep ubuntu
+sudo cat /etc/shadow | grep ubuntu
+sudo tail -f /var/log/auth.log
+sudo passwd ubuntu
+sudo nano /etc/pam.d/common-auth
+sudo rm -f /etc/nologin
+sudo passwd --status ubuntu
+sudo nano /etc/pam.d/common-auth
+sudo nano /etc/pam.d/sshd
+sudo tail -f /var/log/auth.log
+sudo nano /etc/pam.d/sshd
+sudo systemctl restart sshd
+sudo tail -f /var/log/auth.log
+sudo cat /etc/passwd | grep ubuntu
+sudo cat /etc/shadow | grep ubuntu
+sudo nano /etc/pam.d/common-auth
+sudo nano /etc/pam.d/login
+sudo nano /etc/ssh/sshd_config
+sudo passwd --status ubuntu
+sudo cat /etc/shadow | grep ubuntu
+sudo tail -f /var/log/auth.log
+sudo rm -f /etc/nologin
+sudo chmod 640 /etc/shadow
+sudo chown root:shadow /etc/shadow
